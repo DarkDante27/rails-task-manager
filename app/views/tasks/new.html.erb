@@ -1,0 +1,23 @@
+<h1 class="d-flex justify-content-center">Create a new Task</h1>
+
+<div class="d-flex justify-content-center">
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_field :details, class: 'form-control' %>
+  </div>
+  <div class="d-flex justify-content-center">
+     <%= f.submit class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>
+
+<div class="d-flex justify-content-center">
+ <%= link_to (task_list_path) do %>
+  <p><i class="fas fa-undo-alt mr-3 mt-5"></i>Back to list</p>
+<% end %>
+</div>

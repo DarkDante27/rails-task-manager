@@ -1,0 +1,24 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[name="mark-as-done"] {
+  margin-top: 12px;
+  margin-right: 7px;
+}
+
+h1 {
+  color: #573D7C;
+}
+
+body {
+  background-color: #E6E2EC;
+}
+
+a {
+  color: #262626;
+}
+
+a:hover {
+  color: #573D7C;
+}

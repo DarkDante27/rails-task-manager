@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center">
+  <h1>These are all your Tasks</h1>
+</div>
+
+<div class="d-flex flex-column bd-highlight mb-3">
+<% @task.each do |task|%>
+<h2 class="d-flex justify-content-center" ><input type="checkbox" name="mark-as-done" <%= 'checked' if task.completed %>> <%= link_to task.title, task_path(task) %>
+    <%= link_to (task_path(task)),
+    method: :delete,
+    data: { confirm: "Are you sure you want to delete?" } do %>
+  <p><i class="fas fa-trash-alt"></i></p>
+  <% end %>
+</h2>
+<% end %>
+</div>
+
+
+<%= link_to (new_task_path) do %>
+  <p class="d-flex justify-content-center"><i class="fas fa-plus mr-2"></i>Add a new task</p>
+<% end %>

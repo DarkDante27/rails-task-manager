@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="d-flex justify-content-between mt-3 align-items-end">
+    <h1> <%= @task.title %> </h1>
+     <%= link_to (edit_task_path) do %>
+    <p><i class="fas fa-edit mr-2"></i>Update Task</p>
+  <% end %>
+  </div>
+
+  <div style="background-color: #D8D8D7" class="d-flex justify-content-start p-4">
+    <p class="d-flex align-items-center"><%= @task.details %></p>
+  </div>
+
+
+    <p class="d-flex justify-content-center"><input type="checkbox" name="done?" <%= 'checked' if @task.completed %>>
+      <%= @task.completed ? 'Task Completed' : 'The task is not completed yet'
+       %>
+    </p>
+
+  <div class="d-flex justify-content-center">
+   <%= link_to (task_list_path) do %>
+    <p><i class="fas fa-undo-alt mr-2"></i>Back to list</p>
+  <% end %>
+  </div>
+</div>
